@@ -4,9 +4,5 @@ public class Main {
         Game game = new Game();
         game.startGame();
         Human player = game.newCharacter();
-        while (player.healthRemaining() >= 1) {
-
-        }
-
     }
 }
