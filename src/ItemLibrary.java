@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class ItemLibrary extends Item {
+class ItemLibrary extends Item {
 
     private String healthPotion = "Health Potion";
     private String bread = "Bread";     private String water = "Water";

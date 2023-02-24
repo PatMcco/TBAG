@@ -1,14 +1,12 @@
-public abstract class Humanoid implements IMoveable, IInteractable{
+abstract class Humanoid implements IMoveable, IInteractable{
     private final String name;
     private int health;
-    private final String weapon;
 
     public Humanoid(String name, int health, String weapon) {
         this.name = name;
         if (health > 0 && health <= 100) {
             this.health = health;
         }
-        this.weapon = weapon;
     }
 
     public void loseHealth(int damage) {
@@ -17,6 +15,18 @@ public abstract class Humanoid implements IMoveable, IInteractable{
             System.out.println("Player knocked out");
             // Reduce number of lives remaining for the player
         }
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
     }
 
     public int healthRemaining() {

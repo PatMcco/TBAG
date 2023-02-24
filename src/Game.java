@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Game {
     private String intro =
                     """
@@ -29,8 +31,7 @@ public class Game {
                         If stuck, try turning it off and on again.
                     """;
 
-
-    public Game(String intro, String instructions, String gameName, String help) {
+    public Game() {
         this.intro = intro;
         this.instructions = instructions;
         this.gameName = gameName;
@@ -43,6 +44,12 @@ public class Game {
         System.out.println(this.help);
     }
 
+    public Human newCharacter() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("What is your name?");
+        String name = sc.nextLine();
+        return new Human(name);
+    }
     public String getIntro() {
         return intro;
     }
