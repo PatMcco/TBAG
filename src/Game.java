@@ -29,6 +29,20 @@ public class Game {
                         If stuck, try turning it off and on again.
                     """;
 
+
+    public Game(String intro, String instructions, String gameName, String help) {
+        this.intro = intro;
+        this.instructions = instructions;
+        this.gameName = gameName;
+        this.help = help;
+    }
+
+    void startGame() {
+        System.out.println(this.intro);
+        System.out.println(this.instructions);
+        System.out.println(this.help);
+    }
+
     public String getIntro() {
         return intro;
     }
@@ -59,19 +73,6 @@ public class Game {
 
     public void setHelp(String help) {
         this.help = help;
-    }
-
-    void Game(String intro, String instructions, String gameName, String help) {
-        this.intro = intro;
-        this.instructions = instructions;
-        this.gameName = gameName;
-        this.help = help;
-    }
-
-    void startGame() {
-        System.out.println(this.intro);
-        System.out.println(this.instructions);
-        System.out.println(this.help);
     }
 }
 

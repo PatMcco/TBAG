@@ -3,13 +3,12 @@ import java.util.ArrayList;
 public class Human extends Humanoid {
     private int health;
 
-    public Human(String name, int health, String weapon, ArrayList<Item> equipped, ArrayList<Item> inventory) {
+    public Human(String name, int health, String weapon,
+                 ArrayList<Item> equipped, ArrayList<Item> inventory) {
         super(name, health, weapon);
         if (health > 0 && health <= 100) {
             this.health = health;
         }
-        inventory.add(HealthPotion);
-        inventory.add(FancyTwig);
     }
 
     public void loseHealth(int damage) {

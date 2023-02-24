@@ -64,5 +64,4 @@ public class Weapon extends Item {
         this.damage = damage;               this.durability = durability;
     }
 
-
 }
