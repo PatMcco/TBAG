@@ -9,11 +9,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0d784298-830f-4035-8240-6d4181eb9b62" name="Changes" comment="TODO: design a basic linear path for testing and to expand on later.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Engine.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Humanoid.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IInteractable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IMoveable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IMoveable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ItemLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ItemLibrary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Weapon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +52,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -80,6 +80,8 @@
       <updated>1677115707177</updated>
       <workItem from="1677115708237" duration="19176000" />
       <workItem from="1677256820719" duration="1166000" />
+      <workItem from="1677863206476" duration="668000" />
+      <workItem from="1677864031659" duration="4194000" />
     </task>
     <task id="LOCAL-00001" summary="Beginning of a text-based adventure game, TODO: create item entities and a few NPCs with dialogue options.">
       <created>1677166943107</created>

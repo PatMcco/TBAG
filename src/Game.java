@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class Game {
     private String intro =
                     """
-                          _  __                  _____                      
+                          _  __                  _____                     \s
                          / |/ /__ __ ___  ___  / ___/____ ___  ___  ___  ___
                         /    // // // _ \\/ -_)/ /__ / __// -_)/ _ \\/ -_)(_-<
                        /_/|_/ \\_,_//_//_/\\__/ \\___//_/   \\__// .__/\\__//___/
-                                                            /_/            
+                                                            /_/           \s
                     """;
     private String instructions =
                     """
@@ -48,8 +48,9 @@ public class Game {
         Scanner sc = new Scanner(System.in);
         System.out.println("What is your name?");
         String name = sc.nextLine();
-        return new Human(name);
+        return new Human(name, 100, null, null);
     }
+
     public String getIntro() {
         return intro;
     }
