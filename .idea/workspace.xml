@@ -7,12 +7,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d784298-830f-4035-8240-6d4181eb9b62" name="Changes" comment="TODO: design a basic linear path for testing and to expand on later.">
+    <list default="true" id="0d784298-830f-4035-8240-6d4181eb9b62" name="Changes" comment="Shaved down some details, fleshing out basics first.&#10;&#10;TODO: create a &quot;main base&quot; section where player can choose to go on an adventure, sell items, use items, or quit&#10;&#10;TODO: design a basic linear path for testing and to expand on later.">
+      <change afterPath="$PROJECT_DIR$/src/City/CharacterState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/City/Hub.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Human.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ItemLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ItemLibrary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Weapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Items/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ItemLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Items/ItemLibrary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Items/Weapon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -81,7 +85,7 @@
       <workItem from="1677115708237" duration="19176000" />
       <workItem from="1677256820719" duration="1166000" />
       <workItem from="1677863206476" duration="668000" />
-      <workItem from="1677864031659" duration="4194000" />
+      <workItem from="1677864031659" duration="15309000" />
     </task>
     <task id="LOCAL-00001" summary="Beginning of a text-based adventure game, TODO: create item entities and a few NPCs with dialogue options.">
       <created>1677166943107</created>
@@ -104,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677201845310</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Shaved down some details, fleshing out basics first.&#10;&#10;TODO: create a &quot;main base&quot; section where player can choose to go on an adventure, sell items, use items, or quit&#10;&#10;TODO: design a basic linear path for testing and to expand on later.">
+      <created>1677872068215</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1677872068215</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +125,7 @@
     <MESSAGE value="Beginning of a text-based adventure game, TODO: create item entities and a few NPCs with dialogue options." />
     <MESSAGE value="ItemLibrary made&#10;TODO: Give items characteristics" />
     <MESSAGE value="TODO: design a basic linear path for testing and to expand on later." />
-    <option name="LAST_COMMIT_MESSAGE" value="TODO: design a basic linear path for testing and to expand on later." />
+    <MESSAGE value="Shaved down some details, fleshing out basics first.&#10;&#10;TODO: create a &quot;main base&quot; section where player can choose to go on an adventure, sell items, use items, or quit&#10;&#10;TODO: design a basic linear path for testing and to expand on later." />
+    <option name="LAST_COMMIT_MESSAGE" value="Shaved down some details, fleshing out basics first.&#10;&#10;TODO: create a &quot;main base&quot; section where player can choose to go on an adventure, sell items, use items, or quit&#10;&#10;TODO: design a basic linear path for testing and to expand on later." />
   </component>
 </project>

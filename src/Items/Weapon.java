@@ -1,3 +1,5 @@
+package Items;
+
 public enum Weapon {
      SHORTSWORD("Short Sword");
 
@@ -71,7 +73,7 @@ public enum Weapon {
 //        this.durability = durability;
 //    }
 //
-//    public Weapon(String name, int weight, int value,
+//    public Items.Weapon(String name, int weight, int value,
 //                  boolean isTwoHanded, int isRanged, int isMelee,
 //                  boolean isEquippable, int damage, int durability) {
 //        super(name, weight, value);

@@ -1,4 +1,6 @@
-abstract class Item implements IEquippable {
+package Items;
+
+public abstract class Item {
     private String name;
     private int weight;
     private int value;
@@ -33,23 +35,4 @@ abstract class Item implements IEquippable {
         this.value = value;
     }
 
-    @Override
-    public void equip() {
-        System.out.println("Equip");
-    }
-
-    @Override
-    public void unequip() {
-        System.out.println("Unequip");
-    }
-
-    @Override
-    public void use() {
-        System.out.println("Use");
-    }
-
-    @Override
-    public void drop() {
-        System.out.println("Drop");
-    }
 }

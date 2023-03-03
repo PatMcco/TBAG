@@ -31,6 +31,8 @@ public class Game {
                         If stuck, try turning it off and on again.
                     """;
 
+    boolean quit = false;
+
     public Game() {
         this.intro = intro;
         this.instructions = instructions;
@@ -50,6 +52,7 @@ public class Game {
         String name = sc.nextLine();
         return new Human(name, 100, null, null);
     }
+
 
     public String getIntro() {
         return intro;
