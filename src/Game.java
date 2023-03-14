@@ -1,3 +1,5 @@
+import Items.Weapon.*;
+import java.io.File;
 import java.util.Scanner;
 
 public class Game {
@@ -50,9 +52,25 @@ public class Game {
         Scanner sc = new Scanner(System.in);
         System.out.println("What is your name?");
         String name = sc.nextLine();
-        return new Human(name, 100, null, null);
+        return new Human(name, 100, 1, SHORTSWORD);
     }
 
+    public Human loadCharacter() {
+        //check if a save file is present in Save folder
+        //if so, load the character data from the file
+        //if not, create a new character
+        File saveFolder = new File("Save");
+        File[] saveFiles = saveFolder.listFiles();
+        assert saveFiles != null;
+        if (saveFiles.length == 0) {
+            System.out.println("No save files found. Creating new character.");
+            return newCharacter();
+        } else {
+            System.out.println("Loading character.");
+            //TODO: load save information from file (needs arraylist of character info made)
+            return null;
+        }
+    }
 
     public String getIntro() {
         return intro;

@@ -1,8 +1,10 @@
 package City;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+import java.io.FileWriter;
+import com.opencsv.CSVWriter;
 public class Hub {
     private String hubTitle =
             """
@@ -38,7 +40,6 @@ public class Hub {
     private int choice;
     private String input;
 
-
     public ArrayList<String> getHubPrompts() {
         ArrayList<String> hubOptions = new ArrayList<>();
         hubOptions.add("1. Enter the Inn");
@@ -48,7 +49,6 @@ public class Hub {
         hubOptions.add("5. Quit Game");
         return hubOptions;
     }
-
 
     // main menu for the hub where player can get ready for the next adventure
     // or save and quit.
@@ -139,11 +139,16 @@ public class Hub {
     }
 
     //TODO: add save functionality
-    public void quitGame() {
+    public void quitGame() throws IOException {
         System.out.println("Are you sure you'd like to quit the game? (1/2)");
         choice = getInput();
         if (choice == 1) {
             String quitMessage = "Save and Quit.";
+            // TODO: add save functionality and call here
+            //instantiate new CSVWriter object
+            CSVWriter writer = new CSVWriter(new FileWriter("save.csv"));
+            //write data to CSV
+            String save1[] = {Human.getName(), }
             System.out.println(quitMessage);
             System.exit(0);
         } else if (choice == 2) {
