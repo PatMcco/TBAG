@@ -5,14 +5,15 @@ public class Human {
 
     private int health;
     private String name;
+    private int level;
     private ArrayList<Item> equipped = new ArrayList<>();
     private ArrayList<Item> inventory = new ArrayList<>();
 
-
-    public Human(String name, int health, ArrayList<Item> equipped, ArrayList<Item> inventory) {
+    public Human(String name, int health, int level, ArrayList<Item> equipped, ArrayList<Item> inventory) {
         this.name = name;
         this.equipped = equipped;
         this.inventory = inventory;
+        this.level = level;
         if (health > 0 && health <= 100) {
             this.health = health;
         }
@@ -55,5 +56,13 @@ public class Human {
 
     public void setInventory(ArrayList<Item> inventory) {
         this.inventory = inventory;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
     }
 }
