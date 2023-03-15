@@ -1,8 +1,5 @@
-package City;
-
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Scanner;
 import java.io.FileWriter;
 import com.opencsv.CSVWriter;
 public class Hub {
@@ -61,12 +58,9 @@ public class Hub {
         for (String option : getHubPrompts()) {
             System.out.println(option);
         }
-        try {
-            choice = getInput();
-        } catch (NumberFormatException e) {
-            System.out.println("That is not a valid response.");
-            hubPrompts();
-        }
+        // get input and parse choice to int
+        choice = App.getInput();
+
         if (choice == 1) {
             stayTheNight();
         } else if (choice == 2) {
@@ -93,12 +87,8 @@ public class Hub {
         System.out.println("Would you like to stay the night? (1/2)");
         System.out.println("1. Yes (Heal to full)");
         System.out.println("2. No");
-        try {
-            choice = getInput();
-        } catch (NumberFormatException e) {
-            System.out.println("That is not a valid response.");
-            stayTheNight();
-        }
+        choice = App.getInput();
+        // TODO: implement healing and gold cost
         if(choice == 1){
             System.out.println("You decide to stay the night.");
 //            System.out.println("You pay the Innkeeper 10 gold.");
@@ -119,13 +109,7 @@ public class Hub {
         System.out.println(blackSmithTitle);
         System.out.println("Would you like to buy or sell? (1/2)");
         System.out.println("1. Buy");
-        System.out.println("2. Sell");
-        try {
-            choice = getInput();
-        } catch (NumberFormatException e) {
-            System.out.println("That is not a valid response.");
-            blackSmith();
-        }
+        choice = App.getInput();
         if(choice == 1){
             System.out.println("You decide to buy.");
             // buyMenu();
@@ -138,10 +122,28 @@ public class Hub {
         }
     }
 
+    public void buyMenu() {
+        boolean buy = true;
+        ArrayList<ItemLibrary> inventory = Human.getInventory();
+        ArrayList<ItemLibrary> buyItems = ItemLibrary.smallHealItems();
+        int menuSize;
+        while (buy) {
+            menuSize = App.shopMenuDisplay(buyItems);
+            if (choice == 0) {
+                buy = false;
+                hubPrompts();
+            }
+            else if (choice > 0 && choice < menuSize) {
+                System.out.println("You buy a " + buyItems.get(choice - 1).getItemName());
+                inventory.add(buyItems.get(choice - 1));
+            }
+        }
+    }
+
     //TODO: add save functionality
     public void quitGame() throws IOException {
         System.out.println("Are you sure you'd like to quit the game? (1/2)");
-        choice = getInput();
+        choice = App.getInput();
         if (choice == 1) {
             String quitMessage = "Save and Quit.";
             // TODO: add save functionality and call here
@@ -159,10 +161,5 @@ public class Hub {
         }
     }
 
-    public int getInput() {
-        Scanner sc = new Scanner(System.in);
-        input = sc.nextLine();
-        choice = Integer.parseInt(input);
-        return choice;
-    }
+
 }

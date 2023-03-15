@@ -1,5 +1,3 @@
-package Items;
-
 import java.util.ArrayList;
 
 public enum ItemLibrary {
@@ -27,40 +25,40 @@ public enum ItemLibrary {
         return itemName;
     }
 
-    public ArrayList<Object> smallHealItems() {
+    public static ArrayList<ItemLibrary> smallHealItems() {
         String egg = ItemLibrary.EGG.getItemName();
         String milk = ItemLibrary.MILK.getItemName();
         String apple = ItemLibrary.APPLE.getItemName();
-        ArrayList<Object> smallHealItems = new ArrayList<>();
-        smallHealItems.add(egg);
-        smallHealItems.add(milk);
-        smallHealItems.add(apple);
+        ArrayList<ItemLibrary> smallHealItems = new ArrayList<>();
+        smallHealItems.add(ItemLibrary.valueOf(egg));
+        smallHealItems.add(ItemLibrary.valueOf(milk));
+        smallHealItems.add(ItemLibrary.valueOf(apple));
         return smallHealItems;
     }
 
-    public ArrayList<Object> mediumHealItems() {
-        ArrayList<Object> mediumHealItems = new ArrayList<>();
+    public ArrayList<ItemLibrary> mediumHealItems() {
+        ArrayList<ItemLibrary> mediumHealItems = new ArrayList<>();
         String bread = ItemLibrary.BREAD.getItemName();
         String water = ItemLibrary.WATER.getItemName();
         String cheese = ItemLibrary.CHEESE.getItemName();
-        mediumHealItems.add(bread);
-        mediumHealItems.add(water);
-        mediumHealItems.add(cheese);
+        mediumHealItems.add(ItemLibrary.valueOf(bread));
+        mediumHealItems.add(ItemLibrary.valueOf(water));
+        mediumHealItems.add(ItemLibrary.valueOf(cheese));
         return mediumHealItems;
     }
 
-    public ArrayList<Object> largeHealItems() {
-        ArrayList<Object> largeHealItems = new ArrayList<>();
+    public ArrayList<ItemLibrary> largeHealItems() {
+        ArrayList<ItemLibrary> largeHealItems = new ArrayList<>();
         String cake = ItemLibrary.CAKE.getItemName();
         String beef = ItemLibrary.BEEF.getItemName();
         String fish = ItemLibrary.FISH.getItemName();
         String chicken = ItemLibrary.CHICKEN.getItemName();
         String healthPotion = ItemLibrary.HEALTHPOTION.getItemName();
-        largeHealItems.add(cake);
-        largeHealItems.add(beef);
-        largeHealItems.add(fish);
-        largeHealItems.add(chicken);
-        largeHealItems.add(healthPotion);
+        largeHealItems.add(ItemLibrary.valueOf(cake));
+        largeHealItems.add(ItemLibrary.valueOf(beef));
+        largeHealItems.add(ItemLibrary.valueOf(fish));
+        largeHealItems.add(ItemLibrary.valueOf(chicken));
+        largeHealItems.add(ItemLibrary.valueOf(healthPotion));
         return largeHealItems;
     }
 

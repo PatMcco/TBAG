@@ -7,12 +7,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d784298-830f-4035-8240-6d4181eb9b62" name="Changes" comment="Reduced unnecessary classes, cleaned basic prompt navigation code, more reusable functions added, clearer TODO list.">
+    <list default="true" id="0d784298-830f-4035-8240-6d4181eb9b62" name="Changes" comment="Merge branch 'master' of https://github.com/PatMcco/TBAG">
+      <change afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/World.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaceDemo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/interfaceDemo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/City/Hub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/City/Hub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/City/CharacterState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CharacterState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/City/Hub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hub.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Items/ItemLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ItemLibrary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Items/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Weapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,25 +47,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/g/Downloads/opencsv-5.7.1.jar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/g/Downloads/opencsv-5.7.1.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -89,7 +95,8 @@
       <workItem from="1678198024584" duration="20000" />
       <workItem from="1678198055794" duration="7899000" />
       <workItem from="1678461491017" duration="2697000" />
-      <workItem from="1678807229034" duration="6453000" />
+      <workItem from="1678807229034" duration="6575000" />
+      <workItem from="1678899436145" duration="4938000" />
     </task>
     <task id="LOCAL-00001" summary="Beginning of a text-based adventure game, TODO: create item entities and a few NPCs with dialogue options.">
       <created>1677166943107</created>
@@ -126,11 +133,36 @@
       <option name="project" value="LOCAL" />
       <updated>1677886634563</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="working on creating proper human object with basic inventory and equipment, focus on this then get save file working.">
+      <created>1678817994247</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1678817994247</updated>
+    </task>
+    <task id="LOCAL-00007" summary="working on creating proper human object with basic inventory and equipment, focus on this then get save file working. added opencsv dependency">
+      <created>1678818018498</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1678818018498</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Beginning of a text-based adventure game, TODO: create item entities and a few NPCs with dialogue options." />
@@ -138,6 +170,8 @@
     <MESSAGE value="TODO: design a basic linear path for testing and to expand on later." />
     <MESSAGE value="Shaved down some details, fleshing out basics first.&#10;&#10;TODO: create a &quot;main base&quot; section where player can choose to go on an adventure, sell items, use items, or quit&#10;&#10;TODO: design a basic linear path for testing and to expand on later." />
     <MESSAGE value="Reduced unnecessary classes, cleaned basic prompt navigation code, more reusable functions added, clearer TODO list." />
-    <option name="LAST_COMMIT_MESSAGE" value="Reduced unnecessary classes, cleaned basic prompt navigation code, more reusable functions added, clearer TODO list." />
+    <MESSAGE value="working on creating proper human object with basic inventory and equipment, focus on this then get save file working." />
+    <MESSAGE value="working on creating proper human object with basic inventory and equipment, focus on this then get save file working. added opencsv dependency" />
+    <option name="LAST_COMMIT_MESSAGE" value="working on creating proper human object with basic inventory and equipment, focus on this then get save file working. added opencsv dependency" />
   </component>
 </project>

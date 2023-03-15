@@ -1,5 +1,3 @@
-package City;
-
 public class CharacterState {
     private int hubState;
     private int forestState;

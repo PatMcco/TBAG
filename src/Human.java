@@ -1,15 +1,14 @@
 import java.util.ArrayList;
-import Items.*;
 
 public class Human {
 
     private int health;
     private String name;
     private int level;
-    private ArrayList<Item> equipped = new ArrayList<>();
-    private ArrayList<Item> inventory = new ArrayList<>();
+    private ArrayList<ItemLibrary> equipped = new ArrayList<>();
+    private ArrayList<ItemLibrary> inventory = new ArrayList<>();
 
-    public Human(String name, int health, int level, ArrayList<Item> equipped, ArrayList<Item> inventory) {
+    public Human(String name, int health, int level, ArrayList<ItemLibrary> equipped, ArrayList<ItemLibrary> inventory) {
         this.name = name;
         this.equipped = equipped;
         this.inventory = inventory;
@@ -42,19 +41,19 @@ public class Human {
         this.name = name;
     }
 
-    public ArrayList<Item> getEquipped() {
+    public ArrayList<ItemLibrary> getEquipped() {
         return equipped;
     }
 
-    public void setEquipped(ArrayList<Item> equipped) {
+    public void setEquipped(ArrayList<ItemLibrary> equipped) {
         this.equipped = equipped;
     }
 
-    public ArrayList<Item> getInventory() {
+    public static ArrayList<ItemLibrary> getInventory() {
         return inventory;
     }
 
-    public void setInventory(ArrayList<Item> inventory) {
+    public void setInventory(ArrayList<ItemLibrary> inventory) {
         this.inventory = inventory;
     }
 
